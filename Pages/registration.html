@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Performance Monitoring System </title>
+  <link rel="stylesheet" href="../css/registration.css">
+  <link rel="stylesheet" href="">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+  <section id="signup-section">
+    
+    <div id="registration">
+       <div id="side-image">
+
+          <p class="title">CREATE YOUR ACCOUNT!!</p>
+          <p class="word">Hello! Our able Institution <br> Creat Your own Account with <span style="color: orange;">Student Performance </span>Monitoring System </p>
+      </div> 
+      <div id="form">
+        <div id="toast-container" class="toast-container"></div>
+        <h1 id="top" style="display: none;">Registration Form</h1>
+          <form id="reg-form">
+              <label>School Name</label>
+              <input type="text" name="SchoolName" id="School Name" placeholder="Enter School Name">
+              <label>State</label>
+              <input type="text" name="lastName" id="lastName" placeholder="Enter State">
+              <label>County</label>
+              <input type="text" name="County" id="county" placeholder="Enter County">
+          
+              <label>Email</label>
+              <input type="email" id="email" placeholder="Enter Email">
+              <label>Password</label>
+              <input type="password" id="password" placeholder="Enter Password">
+              <div id="hide" style="display: none;">
+                <p class="length">password should contain 7characters</p>
+                <p class="letter">password should contain atleast one letter</p>
+                <p class="number">password should contain atleast one number</p>
+                <p class="capital">password should contain atleast one capital letter</p>
+              </div>
+              <label>Confirm Password</label>
+              <input type="password" id="cpassword" placeholder="Confirm Password">
+              <label class="checkbox-label">
+              <input type="checkbox" value="terms">I agree terms&condition
+              </label>
+
+              <input type="submit" value="Register">
+              <p class="log">Already have an account?<a href="./login.html"><span>Login</span></a></p>
+  
+          </form>
+          <p id="registrationMessage"></p>
+
+      </div>
+    </div>
+  </section>
+  <script src="/Javascript/signup.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.11.1/toastify.min.js"></script>
+</body>
+</html>

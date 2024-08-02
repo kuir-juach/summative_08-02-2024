@@ -1,0 +1,231 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+header {
+    background: #2d3e60;
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #77aaff 3px solid;
+}
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+header ul {
+    padding: 0;
+    list-style: none;
+}
+header li {
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+header #branding {
+    float: left;
+}
+header #branding h1 {
+    margin: 0;
+}
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+#main {
+    padding: 20px;
+    background: #fff;
+    margin-top: 20px;
+}
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid #ddd;
+}
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+th {
+    background-color: #2d3e60;
+    color: white;
+}
+.form-container {
+    background: #fff;
+    padding: 20px;
+    margin-top: 20px;
+}
+.form-container h2 {
+    margin-top: 0;
+}
+.form-container form {
+    display: flex;
+    flex-direction: column;
+}
+.form-container label, .form-container input, .form-container select, .form-container button {
+    margin: 10px 0;
+}
+.form-container input, .form-container select, .form-container button {
+    padding: 10px;
+    font-size: 16px;
+}
+.form-container button {
+    background: #2d3e60;
+    color: #fff;
+    border: none;
+}
+.search-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.search-container input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+header {
+    background:#2d3e60;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+header #branding h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    margin: 2rem 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 0.5rem;
+    text-align: left;
+}
+
+form {
+    margin-top: 1rem;
+}
+
+label {
+    display: block;
+    margin: 0.5rem 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header #branding h1 {
+        font-size: 1.2rem;
+    }
+
+    nav ul {
+        text-align: center;
+        padding: 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 0.5rem 0;
+    }
+
+    table {
+        font-size: 0.8rem;
+    }
+
+    table, th, td {
+        border: 0;
+    }
+
+    th, td {
+        display: block;
+        text-align: right;
+        padding: 0.5rem 0;
+    }
+
+    th {
+        position: absolute;
+        left: -9999px;
+    }
+
+    td {
+        position: relative;
+        padding-left: 50%;
+    }
+
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-right: 1rem;
+        white-space: nowrap;
+        font-weight: bold;
+    }
+}
+
+@media (max-width: 480px) {
+    header #branding h1 {
+        font-size: 1rem;
+    }
+
+    nav ul li {
+        margin: 0.2rem 0;
+    }
+
+    form {
+        font-size: 0.9rem;
+    }
+}

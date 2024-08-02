@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City View Academy Student Performance Tracker</title>
+    <link rel="stylesheet" href="../css/final.css">
+ </head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>City View Academy Student Performance Tracker</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#students">Students</a></li>
+                    <li><a href="#add-student">Add Student</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="main">
+            <h1>Student Performance</h1>
+            <div class="search-container">
+                <input type="text" id="search-bar" placeholder="Search by name or ID">
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Class</th>
+                        <th>Math</th>
+                        <th>Science</th>
+                        <th>English</th>
+                        <th>Social Studies</th>
+                        <th>Religious Studies</th>
+                        <th>Average</th>
+                        <th>Payment Status</th>
+                    </tr>
+                </thead>
+                <tbody id="student-list">
+                    
+                </tbody>
+            </table>
+        </section>
+
+        <section id="add-student" class="form-container">
+            <h2>Add Student</h2>
+            <form id="student-form">
+                <label for="student-id">Student ID:</label>
+                <input type="text" id="student-id" name="student-id" disabled>
+
+                <label for="name">Student Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="class">Class:</label>
+                <select id="class" name="class" required>
+                    <option value="Primary One">Primary One</option>
+                    <option value="Primary Two">Primary Two</option>
+                    <option value="Primary Three">Primary Three</option>
+                    <option value="Primary Four">Primary Four</option>
+                    <option value="Primary Five">Primary Five</option>
+                    <option value="Primary Six">Primary Six</option>
+                    <option value="Primary Seven">Primary Seven</option>
+                    <option value="Primary Eight">Primary Eight</option>
+                </select>
+
+                <label for="math">Math:</label>
+                <input type="number" id="math" name="math" required>
+
+                <label for="science">Science:</label>
+                <input type="number" id="science" name="science" required>
+
+                <label for="english">English:</label>
+                <input type="number" id="english" name="english" required>
+
+                <label for="social-studies">Social Studies:</label>
+                <input type="number" id="social-studies" name="social-studies" required>
+
+                <label for="religious-studies">Religious Studies:</label>
+                <input type="number" id="religious-studies" name="religious-studies" required>
+
+                <label for="payment">Payment Status:</label>
+                <select id="payment" name="payment" required>
+                    <option value="Paid">Paid</option>
+                    <option value="Half">Half</option>
+                    <option value="Quarter">Quarter</option>
+                    <option value="Unpaid">Unpaid</option>
+                </select>
+
+                <button type="submit">Add Student</button>
+            </form>
+        </section>
+    </div>
+
+    <script>
+        let nextId = 1;
+
+        document.getElementById('student-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const studentId = nextId++;
+            const name = document.getElementById('name').value;
+            const studentClass = document.getElementById('class').value;
+            const math = parseFloat(document.getElementById('math').value);
+            const science = parseFloat(document.getElementById('science').value);
+            const english = parseFloat(document.getElementById('english').value);
+            const socialStudies = parseFloat(document.getElementById('social-studies').value);
+            const religiousStudies = parseFloat(document.getElementById('religious-studies').value);
+            const payment = document.getElementById('payment').value;
+
+            const average = ((math + science + english + socialStudies + religiousStudies) / 5).toFixed(2);
+
+            const studentList = document.getElementById('student-list');
+
+            const row = document.createElement('tr');
+
+            row.innerHTML = `
+                <td>${studentId}</td>
+                <td>${name}</td>
+                <td>${studentClass}</td>
+                <td>${math}</td>
+                <td>${science}</td>
+                <td>${english}</td>
+                <td>${socialStudies}</td>
+                <td>${religiousStudies}</td>
+                <td>${average}</td>
+                <td>${payment}</td>
+            `;
+
+            studentList.appendChild(row);
+
+            document.getElementById('student-form').reset();
+        });
+
+        document.getElementById('search-bar').addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            const students = document.querySelectorAll('#student-list tr');
+
+            students.forEach(function(student) {
+                const id = student.cells[0].textContent.toLowerCase();
+                const name = student.cells[1].textContent.toLowerCase();
+                if (id.includes(searchTerm) || name.includes(searchTerm)) {
+                    student.style.display = '';
+                } else {
+                    student.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+
+
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-between; 
+        }
+        .container img {
+            width: 23%; 
+            height: auto;
+            border: 1px solid #ddd; 
+        }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about-us">About Us</a></li>
+                <li class="dropdown">
+                    <a href="#schools" class="dropbtn">Schools</a>
+                    <div class="dropdown-content">
+                        <a href="./Pages/Highlandbright.htm">Highland Bright</a>
+                        <a href="./Pages/cityview.html">City View</a>
+                        <a href="./Pages/juba.html">Juba Junior</a>
+                    </div>
+                </li>
+                <li><a href="./Pages/admin.html">Administration</a></li>
+                <li><a href="#contact-us">Contact Us</a></li>
+                <li><a href="Pages/registration.html">Registration</a></li>
+                <li><a href="Pages/login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h1>Welcome to Our Educational Platform</h1>
+            <div class="container">
+                <img src="students.jpeg" alt="Picture 1">
+                <img src="four.jpg" alt="Picture 2">
+                <img src="./Pictures/two.jpeg" alt="Picture 3">
+                <img src="one pic.jpeg" alt="Picture 4">
+            </div>
+            <p>Explore our schools and learn more about our programs.</p>
+        </section>
+        <section id="about-us">
+            <h2>About Us</h2>
+            <p>
+               SPMS is a cutting-edge solution designed to transform educational management and support student success. Our comprehensive, web-based platform empowers educators and administrators, particularly in government educational systems, by offering a holistic view of student performance. From tracking academic grades and attendance to monitoring extracurricular activities, SPMS provides a seamless and intuitive interface for managing diverse aspects of student progress.
+                
+                The system’s advanced analytics and reporting tools turn raw data into actionable insights, enabling informed decision-making and the development of effective educational policies. With built-in communication features, including messaging and notifications, SPMS fosters collaboration among teachers, administrators, and other stakeholders, enhancing transparency and coordination.
+                
+                Data privacy and security are paramount in SPMS. We incorporate robust measures to safeguard sensitive student information and support data import and export for smooth integration with existing systems. Our goal is to offer a scalable, user-friendly tool that not only meets current educational needs but also anticipates future challenges.
+                
+                By choosing SPMS, schools and educational authorities are investing in a solution that ensures every student's progress is closely monitored and supported. Join us in revolutionizing education through data-driven insights and collaborative solutions, and together, let’s make a positive impact on students' lives worldwide.
+                </p>
+        </section>
+
+        </section>
+        <section id="contact-us">
+            <h2>Contact Us</h2>
+            <form action="https://formspree.io/f/xgvworbd" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="_replyto" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Send</button>
+            </form>
+        </section>
+
+
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>About Us</h3>
+                        <p>We are dedicated to providing a comprehensive platform for monitoring student performance, improving educational outcomes, and ensuring accurate record-keeping.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="#students">Students</a></li>
+                            <li><a href="#add-student">Add Student</a></li>
+                            <li><a href="#timetable">Timetable</a></li>
+                            <li><a href="#about">About</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Contact Us</h3>
+                        <p>Email: k.thuch@alustudent.com</p>
+                        <p>Phone: +250 792 403 120</p>
+                        <p>Address: Kigali Remera</p>
+                    </div>
+                 
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Student Performance Monitoring System. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+    
+    </main>
+</body>
+</html>
